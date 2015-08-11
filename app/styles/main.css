@@ -80,4 +80,10 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+  .hover:hover
+  {
+      cursor: pointer;
+  }
+
 }

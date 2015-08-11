@@ -1,17 +1,20 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">{{user.name}}</div>
-    <div class="panel-body">
-        <div ng-show="!!user.address">
-            <h4>Address:</h4>
-            <span style="margin-left: 15px; margin-top: -10px">{{user.address.street}}</span><br/>
-            <span style="margin-left: 15px; margin-top: -10px">{{user.address.city}}</span><br/>
-            <span style="margin-left: 15px; margin-top: -10px">{{user.address.poBox}}</span><br/>
-        </div>
+
+    <div class="panel-heading" ng-click="ToggleViewState()"><span class="hover">{{user.name}}</span></div>
+    <div class="panel-body" ng-show="IsVisible">
+        <address></address>
 
         <h4>Friends:</h4>
         <ul>
             <li ng-repeat="friend in user.friends">
-                {{friend}}
+               <span remove-friend>
+                    {{friend}}
+                    <span class="glyphicon glyphicon-remove hover" ng-click="showRemove()" ng-hide="removing"></span>
+                    <span ng-show="removing">
+                        <button class="btn btn-xs btn-success" ng-click="remove(friend)">Remove</button>
+                        <button class="btn btn-xs btn-danger" ng-click="cancelRemove()">Cancel</button>
+                    </span>
+                </span>
             </li>
         </ul>
         <div ng-show="!!user.rank">

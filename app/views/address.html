@@ -1,0 +1,10 @@
+<div ng-show="!!user.address && IsVisible" ng-click="ToggleViewState()">
+    <h4 class="hover">Address:</h4>
+    <span style="margin-left: 15px; margin-top: -10px">{{user.address.street}}</span><br/>
+    <span style="margin-left: 15px; margin-top: -10px">{{user.address.city}}</span><br/>
+    <span style="margin-left: 15px; margin-top: -10px">{{user.address.poBox}}</span><br/>
+</div>
+<div ng-show="!!user.address && !IsVisible" ng-click="ToggleViewState()">
+    <h4 class="hover">Address:</h4>
+    <span style="margin-left: 15px; margin-top: -10px">{{user.address.street}}</span><br/>
+</div>
