@@ -31,9 +31,63 @@ angular.module('directivesTesterApp')
 
 angular.module('directivesTesterApp')
     .directive('removeFriend', function () {
-          return {
-              restrict: 'EA',
+       return {
+            restrict: 'E',
+            templateUrl:  '../../views/removefriend.html',
+            scope: {
+                notifyParent: '&method'
+            },
+            controller: function($scope){
+                $scope.removing = false;
+                $scope.toggleIsRemoving = function(){
+                    $scope.removing = !$scope.removing;
+                }
 
+                $scope.remove = function(){
+                    $scope.notifyParent();
+                }
+            }
+
+
+       };
+
+});
+
+
+/*
+ angular.module('directivesTesterApp')
+ .directive('removeFriend', function () {
+ return {
+ restrict: 'A',
+ controller: function($scope) {
+ $scope.removing = false;
+
+ $scope.showRemove = function(){
+ $scope.removing = true;
+ };
+
+ $scope.cancelRemove = function(){
+ $scope.removing = false;
+ };
+
+ $scope.remove = function(friend){
+
+ };
+ }
+ }
+
+ });
+ */
+/*var idx = $scope.user.friends.indexOf(friend);
+ if(idx > -1)
+ $scope.user.friends.splice(idx,1);*/
+// onRemoveFriend(friend);
+
+/*
+angular.module('directivesTesterApp')
+    .directive('removeFriend', function () {
+          return {
+              restrict: 'A',
               controller: function($scope) {
                   $scope.removing = false;
 
@@ -46,15 +100,16 @@ angular.module('directivesTesterApp')
                   };
 
                   $scope.remove = function(friend){
-                      /*var idx = $scope.user.friends.indexOf(friend);
+                      var idx = $scope.user.friends.indexOf(friend);
                       if(idx > -1)
-                          $scope.user.friends.splice(idx,1);*/
+                          $scope.user.friends.splice(idx,1);
                      // onRemoveFriend(friend);
                   };
               }
           }
 
     });
+ */
 
 angular.module('directivesTesterApp')
     .directive('address', function () {

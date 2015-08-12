@@ -7,14 +7,10 @@
         <h4>Friends:</h4>
         <ul>
             <li ng-repeat="friend in user.friends">
-               <span remove-friend>
+                <div style="display: inline-flex;">
                     {{friend}}
-                    <span class="glyphicon glyphicon-remove hover" ng-click="showRemove()" ng-hide="removing"></span>
-                    <span ng-show="removing">
-                        <button class="btn btn-xs btn-success" ng-click="remove(friend)">Remove</button>
-                        <button class="btn btn-xs btn-danger" ng-click="cancelRemove()">Cancel</button>
-                    </span>
-                </span>
+                    <remove-friend   method="removeFriend(friend)" />
+                </div>
             </li>
         </ul>
         <div ng-show="!!user.rank">
