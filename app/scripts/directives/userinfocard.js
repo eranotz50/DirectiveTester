@@ -35,7 +35,8 @@ angular.module('directivesTesterApp')
             restrict: 'E',
             templateUrl:  '../../views/removefriend.html',
             scope: {
-                notifyParent: '&method'
+                friend: '=',
+                onRemoveFriend: '&'
             },
             controller: function($scope){
                 $scope.removing = false;
@@ -44,7 +45,7 @@ angular.module('directivesTesterApp')
                 }
 
                 $scope.remove = function(){
-                    $scope.notifyParent();
+                    $scope.onRemoveFriend();
                 }
             }
 
