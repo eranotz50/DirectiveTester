@@ -1,4 +1,4 @@
-// Generated on 2015-08-05 using generator-angular 0.12.1
+// Generated on 2015-09-03 using generator-angular 0.12.1
 'use strict';
 
 // # Globbing
@@ -10,7 +10,7 @@
 module.exports = function (grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
-  require('time-grunt')(grunt);
+   require('time-grunt')(grunt);
 
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
@@ -19,7 +19,7 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
-  // Configurable paths for the application
+// Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
@@ -64,9 +64,6 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
-      },
-      css:{
-          files:['app/styles/*.css']
       }
     },
 
@@ -322,7 +319,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'directivesTesterApp',
+          module: 'directiveTesterApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -372,11 +369,6 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
-        }, {
-          expand: true,
-          cwd: 'bower_components/bootstrap/dist',
-          src: 'fonts/*',
-          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
