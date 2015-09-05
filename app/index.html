@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../bower_components/bootswatch/superhero/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 
+    <script src="scripts/controllers/module2.js"></script>
     <!-- endbuild -->
   </head>
   <body ng-app="directivesTesterApp">
@@ -48,6 +49,10 @@
         <div class="row">
             <div class="col-md-3" ng-include="'views/sidebar.html'" ng-controller="SideBarCtrl"></div>
             <div class="col-md-9" ui-view></div>
+            <!-- check if link function is called when placing it outside the ui-view scope Ran shared the source code with you.  -->
+            <!-- if it does work check google this problem -->
+
+
             <!--<div  class="col-md-9" ng-include="'views/main.html'" ng-controller="MainCtrl"></div> -->
         </div>
     </div>
@@ -56,31 +61,19 @@
           <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/sidebar.js"></script>
-        <script src="scripts/directives/userinfocard.js"></script>
-        <!-- endbuild -->
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/sidebar.js"></script>
+    <script src="scripts/controllers/module2.js"></script>
+    <script src="scripts/directives/userinfocard.js"></script>
+    <script src="scripts/directives/spacebarsupport.js"></script>
+
 </body>
 </html>

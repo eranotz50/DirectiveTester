@@ -17,7 +17,8 @@
 
             .state('module2', {
                 url: '/module2',
-                templateUrl: '/views/module2.html'
+                templateUrl: '/views/module2.html',
+                controller: 'module2Ctrl'
             });
 
     });

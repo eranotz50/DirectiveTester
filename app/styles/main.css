@@ -87,4 +87,12 @@ body {
       cursor: pointer;
   }
 
+  /*------------ module 2 ----------------*/
+
+
+  .highlight{
+      color: red;
+  }
+
+  /*------------ end module 2 ----------------*/
 }
