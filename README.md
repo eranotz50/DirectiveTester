@@ -1,10 +1,12 @@
-to get up and running : 
+# directive-tester
 
+This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.12.1.
 
-1) git clone https://github.com/eranotz50/DirectiveTester.git
+## Build & development
 
-2) npm install    // Ignore the errors assoicated with grunt . 
+Run `grunt` for building and `grunt serve` for preview.
 
-3) bower install 
+## Testing
 
-4) grunt serve 
+Running `grunt test` will run the unit tests with karma.
