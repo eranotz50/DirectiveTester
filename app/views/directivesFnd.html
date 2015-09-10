@@ -1,0 +1,8 @@
+<div>
+    <div>{{ title }}</div>
+    <div ng-repeat="link in links" style="display: inline">
+        <a style="display: inline;" ui-sref="{{link.state}}">{{ link.title }}</a>
+        <div class="verticalSep"></div>
+    </div>
+    <div ui-view></div>
+</div>
