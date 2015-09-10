@@ -15,11 +15,18 @@
                 templateUrl: '/views/main.html'
             })
 
-            .state('module2', {
-                url: '/module2',
-                templateUrl: '/views/module2.html',
-                controller: 'module2Ctrl'
+            .state('directivesFnd', {
+                url: '/directivesFnd',
+                templateUrl: '/views/directivesFnd.html',
+                controller: 'directivesCourseCtrl'
+            })
+
+            .state('directivesFnd.module1', {
+                url: '/directivesFnd.module1',
+                templateUrl: '/views/directivesFnd/module1.html',
+                controller: 'dirFndModule1Ctrl'
             });
+
 
     });
 

@@ -94,5 +94,11 @@ body {
       color: red;
   }
 
+  .verticalSep{
+      border-right: 2px solid #e5e5e5;
+      margin: 0 15px 0 5px;
+      display: inline;
+  }
+
   /*------------ end module 2 ----------------*/
 }

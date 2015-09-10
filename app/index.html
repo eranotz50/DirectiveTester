@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="../bower_components/bootswatch/superhero/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 
-    <script src="scripts/controllers/module2.js"></script>
     <!-- endbuild -->
   </head>
   <body ng-app="directivesTesterApp">
+
       <p class="browsehappy">You are using an   <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 
     
@@ -33,6 +33,7 @@
             <a class="navbar-brand" href="#/">directivesTester</a>
           </div>
 
+
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
@@ -45,16 +46,14 @@
       </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3" ng-include="'views/sidebar.html'" ng-controller="SideBarCtrl"></div>
-            <div class="col-md-9" ui-view></div>
-            <!-- check if link function is called when placing it outside the ui-view scope Ran shared the source code with you.  -->
-            <!-- if it does work check google this problem -->
+    <div class="row" style="height: 100%;">
+        <div class="col-md-3" ng-include="'views/sidebar.html'" ng-controller="SideBarCtrl"></div>
+        <div class="col-md-9" ui-view style="background: red;"></div>
+        <!-- check if link function is called when placing it outside the ui-view scope Ran shared the source code with you.  -->
+        <!-- if it does work check google this problem -->
 
 
-            <!--<div  class="col-md-9" ng-include="'views/main.html'" ng-controller="MainCtrl"></div> -->
-        </div>
+        <!--<div  class="col-md-9" ng-include="'views/main.html'" ng-controller="MainCtrl"></div> -->
     </div>
 
       <div class="footer">
@@ -71,7 +70,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/sidebar.js"></script>
-    <script src="scripts/controllers/module2.js"></script>
+    <script src="scripts/controllers/directivesFnd.js"></script>
     <script src="scripts/directives/userinfocard.js"></script>
     <script src="scripts/directives/spacebarsupport.js"></script>
 
